@@ -102,12 +102,6 @@ if __name__ == "__main__":
     axs[0, 1].set_ylabel("R(t)")
     axs[0, 1].set_ylim(0, 1.05)
     axs[0, 1].grid(True, linestyle="--", alpha=0.4)
-    axs[0, 1].annotate(
-        "Mayor sincronización",
-        xy=(T * 0.8, R_k[-1]),
-        xytext=(T * 0.5, 0.3),
-        arrowprops=dict(arrowstyle="->", lw=1.2),
-    )
 
     for i in range(N):
         axs[1, 0].plot(times, hist_w[:, i], lw=0.8, alpha=0.7)
@@ -123,12 +117,6 @@ if __name__ == "__main__":
     axs[1, 1].set_ylabel("R(t)")
     axs[1, 1].set_ylim(0, 1.05)
     axs[1, 1].grid(True, linestyle="--", alpha=0.4)
-    axs[1, 1].annotate(
-        "Transición a sincronía",
-        xy=(T * 0.8, R_w[-1]),
-        xytext=(T * 0.4, 0.4),
-        arrowprops=dict(arrowstyle="->", lw=1.2),
-    )
 
     plt.tight_layout(rect=[0, 0, 1, 0.96])
     plt.show()
